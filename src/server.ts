@@ -6,8 +6,8 @@ const TELEGRAM_CHAT_ID = 'YOUR_API_KEYCHAT_ID';
 
 // The Amazon product id. The XXX in
 // https://www.amazon.com/dp/XXX or https://www.amazon.com/gp/product/XXX
-const AMAZON_PRODUCT_ID = 'B08KB652Q2';
-const TARGET_PRICE = 300;
+const AMAZON_PRODUCT_ID = 'B07YN45T61';
+const TARGET_PRICE = 10;
 
 const MS_MINUTES = 1000 * 60;
 const BASE_TIMEOUT = MS_MINUTES * 2;
