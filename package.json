@@ -1,0 +1,15 @@
+{
+  "name": "rgthree-pricewatch",
+  "description": "Watch prices.",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "jsdom": "^16.4.0",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "@types/jsdom": "11.0.4",
+    "@types/node": "^12.12.2",
+    "@types/node-fetch": "^2.5.7"
+  }
+}
