@@ -4,11 +4,16 @@ import {TelegramBot} from './telegrambot';
 const TELEGRAM_API_KEY = 'YOUR_API_KEY';
 const TELEGRAM_CHAT_ID = 'YOUR_API_KEYCHAT_ID';
 
+// The Amazon product id. The XXX in
+// https://www.amazon.com/dp/XXX or https://www.amazon.com/gp/product/XXX
+const AMAZON_PRODUCT_ID = 'B08KB652Q2';
+const TARGET_PRICE = 300;
+
 const MS_MINUTES = 1000 * 60;
 const BASE_TIMEOUT = MS_MINUTES * 2;
 
-const priceChecker = new AmazonPriceChecker('B08KB652Q2');
 const telegram = new TelegramBot(TELEGRAM_API_KEY, TELEGRAM_CHAT_ID);
+const priceChecker = new AmazonPriceChecker(AMAZON_PRODUCT_ID);
 
 /**
  * Checks the price with `priceChecker`, issues a message with `telegram` if
@@ -20,7 +25,7 @@ async function check() {
     const {url, price} = await priceChecker.check();
 
     if (price) {
-      if (price <= 320) {
+      if (price <= TARGET_PRICE) {
         telegram.sendMessage(`Price is: ${price}. Checking again in ${timeout / MS_MINUTES} minutes. ${url}`);
       }
     } else {
