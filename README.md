@@ -6,7 +6,7 @@ A super simple bot/script that scrapes an Amazon product page to get a products 
 
 1. Clone this repo.
 2. Install with `npm install`
-3. Change the `TELEGRAM_API_KEY` and `TELEGRAM_CHAT_ID` in the `server.ts`
+3. Change the `TELEGRAM_API_KEY`, `TELEGRAM_CHAT_ID`, `AMAZON_PRODUCT_ID`, and `TARGET_PRICE` in the `server.ts`
 4. Build the TypeScript with `tsc`
 5. Run with NodeJS: `node ./dist/server.js`
 
